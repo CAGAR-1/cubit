@@ -1,13 +1,19 @@
 import 'dart:math';
 
+import 'package:cubit_dio/features/home/cubit/post_cubit.dart';
 import 'package:cubit_dio/features/home/data/model/response/post_model.dart';
 import 'package:cubit_dio/features/home/data/repository/post_repository.dart';
 import 'package:cubit_dio/features/home/presentation/screen/home.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() async {
   runApp(
-    MaterialApp(home: HomeScreen()),
+    MaterialApp(
+        home: BlocProvider(
+      create: (context) => PostCubit(),
+      child: HomeScreen(),
+    )),
   );
 }
 
