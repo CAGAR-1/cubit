@@ -1,7 +1,11 @@
+import 'dart:math';
+
+import 'package:cubit_dio/features/home/data/model/response/post_model.dart';
+import 'package:cubit_dio/features/home/data/repository/post_repository.dart';
 import 'package:cubit_dio/features/home/presentation/screen/home.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
   runApp(
     MaterialApp(home: HomeScreen()),
   );
