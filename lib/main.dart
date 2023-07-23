@@ -1,7 +1,10 @@
+import 'package:cubit_dio/features/home/presentation/screen/home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MaterialApp(home: HomeScreen()),
+  );
 }
 
 class MyApp extends StatelessWidget {
