@@ -14,7 +14,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("HI"),
+        title: Text("BLOC"),
       ),
       body: SafeArea(child: BlocBuilder<PostCubit, PostState>(
         builder: (context, state) {
@@ -29,12 +29,14 @@ class _HomeScreenState extends State<HomeScreen> {
               itemBuilder: (context, index) {
                 return ListTile(
                     title: Text(
-                  state.posts[index].toString(),
+                  state.posts[index].title.toString(),
                 ));
               },
             );
           }
-          return Container();
+          return Center(
+            child: Text("ERROR"),
+          );
         },
       )),
     );

@@ -6,7 +6,9 @@ import 'package:meta/meta.dart';
 part 'post_state.dart';
 
 class PostCubit extends Cubit<PostState> {
-  PostCubit() : super(PostLoadingState());
+  PostCubit() : super(PostLoadingState()) {
+    fetchPosts();
+  }
 
   PostRepository postRepository = PostRepository();
 
